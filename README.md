@@ -1,3 +1,8 @@
+# Advanced React and Redux 2019
+
+Detailed project on advanced React and Redux concepts - Authentication, Testing, Middlewares, HOC's, and Deployment
+
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
