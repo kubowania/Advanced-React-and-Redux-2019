@@ -5,6 +5,7 @@ export default function(state = [], action) {
     case SAVE_COMMENT:
       return [...state, action.payload]; //takes all our exisitng comments and puts them in the array, then adds the new comment
     case FETCH_COMMENTS:
+      debugger;
       const comments = action.payload.data.map(comment => comment.name)
       return [...state, ...comments]
     default:

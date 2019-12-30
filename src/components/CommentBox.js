@@ -1,22 +1,24 @@
 import React, {Component} from 'react';
 import { connect } from 'react-redux'; //this will connect our global data to the file
 import * as actions from 'actions'; //will grab all the actions out our actions/index.js file
+import requireAuth from 'components/requireAuth'
 
 class CommentBox extends Component {
-state = { comment: ''};
+  state = { comment: ''};
 
-handleChange = (e) => {
-  this.setState({ comment: e.target.value})
-}
 
-handleSubmit = (e) => {
-  e.preventDefault()
+  handleChange = (e) => {
+    this.setState({ comment: e.target.value})
+  }
 
-  this.props.saveComment(this.state.comment)
-  this.setState({ comment: ''})
-}
+  handleSubmit = (e) => {
+    e.preventDefault()
 
-//no parathesis on fetchComments as this is a CALLBACK we dont want to envoke the fucntion.
+    this.props.saveComment(this.state.comment)
+    this.setState({ comment: ''})
+  }
+
+  //no parathesis on fetchComments as this is a CALLBACK we dont want to envoke the fucntion.
   render() {
     return (
       <div>
@@ -35,4 +37,6 @@ handleSubmit = (e) => {
   }
 }
 
-export default connect(null, actions)(CommentBox);
+
+
+export default connect(null, actions)(requireAuth(CommentBox));
