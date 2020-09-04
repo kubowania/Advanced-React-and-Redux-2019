@@ -11,7 +11,7 @@
     "enzyme-adapter-react-16": "^1.15.1",
     "fibers": "^4.0.2",
     "moxios": "^0.4.0",
-    "node-sass": "^4.13.0",
+    "node-sass": "^4.13.1",
     "react": "^16.12.0",
     "react-dom": "^16.12.0",
     "react-redux": "^7.1.3",
